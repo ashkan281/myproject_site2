@@ -7,6 +7,10 @@ class artikle(models.Model):
     # braye neveshtan author dastan intorie ke az ravesh manytoone estefade mishe yani 
     # be ezaye har ye user mitavan chandin ta mahgale dasht
     # one delete yani bad az inkke user pak shavad on hm pak mishe 
+    
+    
+                                            # ( on_delete=model.set_null  , null=true )-->agar user pak shavad mitone null bashe 
+                                            # ( on_delete=model.set_defult   , defult='yek meghdar bayd dashte bashe ' ) 
     author = models.ForeignKey(User , on_delete=models.CASCADE)
     title = models.CharField(max_length=10)
     body = models.TextField()
