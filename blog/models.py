@@ -8,8 +8,6 @@ class artikle(models.Model):
     # be ezaye har ye user mitavan chandin ta mahgale dasht
     # one delete yani bad az inkke user pak shavad on hm pak mishe 
     author = models.ForeignKey(User , on_delete=models.CASCADE)
-    
-    
     title = models.CharField(max_length=10)
     body = models.TextField()
     image = models.ImageField(upload_to="images/artikle")

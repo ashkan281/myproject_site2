@@ -5,6 +5,6 @@ from blog.models import artikle
 
 def show_home(request):
     
-    Artikle = artikle.object.all()
-    return render(request , 'home_app/index.html' , context={'Artikle':Artikle , })
+    Artikle = artikle.objects.all()
+    return render(request , 'home_app/index.html' , context={ 'Artikle': Artikle } )
 
