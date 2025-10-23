@@ -101,23 +101,27 @@ https://templatemo.com/tm-551-stand-blog
     <div class="main-banner header-text">
       <div class="container-fluid">
         <div class="owl-banner owl-carousel">
+
+          {% for artikle in Artikle%}
           <div class="item">
-            <img src="assets/images/banner-item-01.jpg" alt="">
+            <img src="" alt="">
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
                   <span>Fashion</span>
                 </div>
-                <a href="post-details.html"><h4>Morbi dapibus condimentum</h4></a>
+                <a href="post-details.html"><h4>{{ artikle.title }}</h4></a>
                 <ul class="post-info">
-                  <li><a href="#">Admin</a></li>
-                  <li><a href="#">May 12, 2020</a></li>
+                  <li><a href="#">{{ artikle.author.username }}</a></li>
+                  <li><a href="#">{{ artikle.created_time }}</a></li>
                   <li><a href="#">12 Comments</a></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="item">
+          {% endfor %}
+
+          {% comment %} <div class="item">
             <img src="assets/images/banner-item-02.jpg" alt="">
             <div class="item-content">
               <div class="main-content">
@@ -196,7 +200,7 @@ https://templatemo.com/tm-551-stand-blog
                 </ul>
               </div>
             </div>
-          </div>
+          </div> {% endcomment %}
         </div>
       </div>
     </div>
