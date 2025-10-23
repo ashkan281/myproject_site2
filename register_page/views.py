@@ -8,7 +8,7 @@ def show_register(request):
         'errors' : [],
     }
     if request.user.is_authenticated == True :
-        return redirect('/')
+        return redirect('home:home')
         
     if request.method == "POST":
         username = request.POST.get('username')
@@ -27,7 +27,7 @@ def show_register(request):
             email=email
         )  
         login(request , user)
-        return redirect('/')
+        return redirect('home:home')
     
     
     

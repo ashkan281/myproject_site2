@@ -78,16 +78,16 @@ https://templatemo.com/tm-551-stand-blog
                 {%endif%}
                 <div class="collapse navbar-collapse">
                 <li class="nav-item ">
-                  <a class="nav-link" href="/logout">logout</a>
+                  <a class="nav-link" href="{% url 'login:logout' %}">logout</a>
                 </li>
                 </div>
               </div>
               {% else %}
               <li class="nav-item">
-                <a class="nav-link" href="/login">Login</a>
+                <a class="nav-link" href="{% url 'login:login'%}">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/singin">singin</a>
+                <a class="nav-link" href="{% url 'register:registers'%}">singin</a>
               </li>
               {% endif %}
             </ul>
