@@ -32,7 +32,7 @@ class artikle(models.Model):
    
     category = models.ManyToManyField(Category)
    
-    body = models.TextField()
+    body = models.TextField()   
     image = models.ImageField(upload_to="images/artikle")
     # be sorat khodkar yek tarikh roz ro dorost mikone 
     created_time = models.DateTimeField(auto_now_add=True)
@@ -42,7 +42,13 @@ class artikle(models.Model):
     # pub date tarikh roz ro migire 
     pub_date = models.DateField(default=timezone.datetime.now())
     
+    # myfile = models.FileField(upload_to='images/resome' , null=True)
+    
+    
+    
     def __str__(self):
         return f"{self.title} - {self.body[:30]}"
     
        
+    # file field hm gozine khobie braye download file and image or video ast 
+    
