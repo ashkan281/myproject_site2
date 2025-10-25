@@ -72,6 +72,13 @@ https://templatemo.com/tm-551-stand-blog
               {% if request.user.is_authenticated%}
               <div class="d-flex">
                 {% if request.user.first_name%}
+                <div class="collapse navbar-collapse" >
+                <li class="nav-item ">
+                   <img src="{{ user.profiles.image.url }}" width="45px" height="40px" style="border-radius: 50%" alt="">
+                </li>
+                </div>
+
+               
                   <a class="nav-link " href="">{{request.user.first_name}}</a>
                 {%else%}
                   <a class="nav-link" href="">{{request.user.username}}</a>
@@ -107,7 +114,7 @@ https://templatemo.com/tm-551-stand-blog
             <div class="item-content">
               <div class="main-content">
                 <div class="meta-category">
-                  <span>Fashion</span>
+                  <span>{{ show_artikle.category.first }}</span>
                 </div>
                 <a href="post-details.html"><h4>{{ show_artikle.title }}</h4></a>
                 <ul class="post-info">
