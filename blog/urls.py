@@ -1,0 +1,9 @@
+from django.urls import path
+from . import views
+
+
+app_name = "blog"
+urlpatterns = [
+    path('detail/<int:pk>' , views.show_detail_blog , name="blog"),
+    path('' , views.show_detail_blog), 
+]

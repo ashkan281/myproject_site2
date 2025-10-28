@@ -8,6 +8,11 @@ urlpatterns = [
     path('' , include('home_app.urls')),
     path('' , include('login_page.urls')),
     path('' , include('register_page.urls')),
+    path('blog/' , include('blog.urls')),
+    
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
 
 
