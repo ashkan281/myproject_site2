@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'blog',
     
     # for cleanup 
+    # for test by git hib 
     'django_cleanup.apps.CleanupConfig',
     
 ]
